@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero-section d-flex align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="hero-title">
+          We Build Brands That Lead.
+        </h1>
+        <p class="hero-subtitle mt-4">
+          Strategy-driven brand architecture and performance marketing
+          for ambitious companies ready to define their category.
+        </p>
+        <div class="mt-5">
+          <a href="{% url 'contact' %}" class="btn btn-dark btn-lg me-3 px-5">
+            Start a Strategic Conversation
+          </a>
+          <a href="{% url 'services' %}" class="btn btn-outline-dark btn-lg px-5">
+            View Capabilities
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CAPABILITIES -->
+<section class="section-spacing border-top">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-6">
+        <h2 class="section-title">Core Capabilities</h2>
+      </div>
+    </div>
+
+    <div class="row g-5">
+      {% for service in services|slice:":3" %}
+      <div class="col-lg-4">
+        <div class="capability-card">
+          <h4 class="capability-title">{{ service.title }}</h4>
+          <p class="capability-text mt-3">
+            {{ service.description|truncatewords:20 }}
+          </p>
+          <a href="{% url 'service_detail' service.slug %}" class="capability-link">
+            Explore →
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+<!-- APPROACH -->
+<section class="section-spacing bg-black text-white">
+  <div class="container text-center">
+    <h2 class="section-title text-white">
+      Strategy Before Execution.
+    </h2>
+    <p class="approach-text mt-4 mx-auto">
+      Every engagement begins with clarity. We define positioning,
+      analyze audience psychology, and architect scalable growth systems
+      before deploying execution.
+    </p>
+  </div>
+</section>
+
+
+<!-- IMPACT STATS -->
+<section class="section-spacing border-top">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <h2 class="stat-number">120+</h2>
+        <p class="stat-label">Strategic Projects Delivered</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h2 class="stat-number">8+</h2>
+        <p class="stat-label">Industries Served</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <h2 class="stat-number">Multi-Channel</h2>
+        <p class="stat-label">Growth Systems</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FINAL CTA -->
+<section class="final-cta bg-black text-white text-center">
+  <div class="container">
+    <h2 class="cta-title">
+      Ready to Define Your Category?
+    </h2>
+    <div class="mt-4">
+      <a href="{% url 'contact' %}" class="btn btn-light btn-lg px-5">
+        Let’s Build
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
