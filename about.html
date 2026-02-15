@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- HERO -->
+<section class="hero-section d-flex align-items-center border-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="hero-title">
+          Strategy Is Our Foundation.
+        </h1>
+        <p class="hero-subtitle mt-4">
+          We are a premium brand strategy and marketing firm
+          focused on building category-defining companies.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHO WE ARE -->
+<section class="section-spacing">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2 class="section-title">Who We Are</h2>
+      </div>
+      <div class="col-lg-6">
+        <p class="about-text">
+          We operate at the intersection of strategy, psychology, and performance.
+          Our work is not driven by trends — it is driven by positioning clarity,
+          audience intelligence, and measurable growth architecture.
+        </p>
+        <p class="about-text mt-4">
+          From ambitious startups to established enterprises, we partner with
+          companies ready to lead their market — not follow it.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PHILOSOPHY -->
+<section class="section-spacing bg-black text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2 class="section-title text-white">
+          Our Philosophy
+        </h2>
+      </div>
+      <div class="col-lg-6">
+        <p class="about-text text-light">
+          Execution without clarity creates noise.
+          Strategy creates dominance.
+        </p>
+        <p class="about-text text-light mt-4">
+          Every engagement begins with defining competitive positioning,
+          audience perception, and scalable growth levers. Only then do we deploy
+          marketing systems engineered for long-term authority.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- OUR APPROACH -->
+<section class="section-spacing border-top">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-6">
+        <h2 class="section-title">Our Approach</h2>
+      </div>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-4">
+        <h4 class="approach-step">01. Diagnose</h4>
+        <p class="approach-desc">
+          Market positioning analysis. Competitive landscape mapping.
+          Audience psychology evaluation.
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h4 class="approach-step">02. Architect</h4>
+        <p class="approach-desc">
+          Brand structure. Messaging systems.
+          Growth framework development.
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h4 class="approach-step">03. Scale</h4>
+        <p class="approach-desc">
+          Performance marketing execution.
+          Optimization cycles. Sustainable expansion.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FINAL STATEMENT -->
+<section class="final-cta bg-black text-white text-center">
+  <div class="container">
+    <h2 class="cta-title">
+      We Don’t Follow Markets. We Define Them.
+    </h2>
+    <div class="mt-4">
+      <a href="{% url 'contact' %}" class="btn btn-light btn-lg px-5">
+        Start a Strategic Conversation
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
